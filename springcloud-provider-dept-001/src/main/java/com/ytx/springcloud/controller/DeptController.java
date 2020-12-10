@@ -2,7 +2,6 @@ package com.ytx.springcloud.controller;
 
 import com.ytx.springcloud.pojo.Dept;
 import com.ytx.springcloud.service.DeptService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

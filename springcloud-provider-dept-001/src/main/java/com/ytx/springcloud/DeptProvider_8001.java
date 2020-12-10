@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class SpringbootApplication {
+public class DeptProvider_8001 {
     public static void main(String[] args){
-        SpringApplication.run(SpringbootApplication.class, args);
+        SpringApplication.run(DeptProvider_8001.class, args);
     }
 }

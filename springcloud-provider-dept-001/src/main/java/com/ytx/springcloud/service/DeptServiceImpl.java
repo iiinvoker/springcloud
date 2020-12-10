@@ -14,6 +14,7 @@ public class DeptServiceImpl implements DeptService{
 
     @Autowired
     private  DeptDao deptDao;
+
     @Override
     public boolean addDept(Dept dept) {
         return deptDao.addDept(dept);
@@ -26,6 +27,7 @@ public class DeptServiceImpl implements DeptService{
 
     @Override
     public List<Dept> queryAll() {
+
         return deptDao.queryAll();
     }
 }

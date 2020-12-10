@@ -11,9 +11,9 @@ import java.util.List;
 @Repository
 public interface DeptDao {
 
-    public boolean addDept(Dept dept);
+    boolean addDept(Dept dept);
 
-    public Dept queryById(int id);
+    Dept queryById(int id);
 
-    public List<Dept> queryAll();
+    List<Dept> queryAll();
 }
