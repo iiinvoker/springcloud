@@ -15,3 +15,15 @@ spring:
     url: jdbc:mysql://localhost:3306/gpss?userSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: root
+
+#eureka服务地址配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: springcloud-provider-dept8001
+
+info:
+ app.name: ytx-springcloud
+ company.name: blog.ytx.com
