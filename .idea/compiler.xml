@@ -11,6 +11,8 @@
         <module name="springcloudeureka7001" />
         <module name="springcloud-api" />
         <module name="springcloudconsumerdept80" />
+        <module name="springcloudproviderdept003" />
+        <module name="springcloudproviderdept002" />
         <module name="springcloudproviderdept001" />
       </profile>
     </annotationProcessing>
