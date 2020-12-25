@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
 public class MyRule {
     @Bean
     public IRule myRule(){
-        return new RandomRule();
+        return new RibbonRule();
     }
 }

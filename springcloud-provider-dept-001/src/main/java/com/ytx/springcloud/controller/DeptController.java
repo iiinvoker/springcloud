@@ -1,5 +1,6 @@
 package com.ytx.springcloud.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.ytx.springcloud.pojo.Dept;
 import com.ytx.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +28,22 @@ public class DeptController {
         return deptService.addDept(dept);
     }
 
+    @HystrixCommand(fallbackMethod = "hystrixGet")
     @GetMapping("dept/get/{id}")
     public Dept get(@PathVariable("id") int id){
-        return deptService.queryById(id);
+        Dept dept=deptService.queryById(id);
+        if(dept==null){
+            throw new RuntimeException("id=>"+id+"不存在该用户或无法找到信息");
+        }
+        return dept;
+    }
+
+    public Dept hystrixGet(@PathVariable("id") int id){
+        Dept dept=new Dept("");
+        dept.setDeptno(id);
+        dept.setDname("id=>"+id+"不存在该用户或无法找到信息");
+        dept.setDb_source("no record in database");
+        return dept;
     }
 
     @GetMapping("/dept/list")
