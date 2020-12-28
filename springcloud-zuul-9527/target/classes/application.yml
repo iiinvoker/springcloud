@@ -1,0 +1,21 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: springcloud-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: zuul19527.com
+    prefer-ip-address: true
+info:
+  app.name: ytx-springcloud
+  company.name: ytx.com
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-dept
+    mydept.path: /mydept/**
+  ignored-services: "*" #隐藏全部真实项目名称
+  prefix: /ytx #统一前缀
